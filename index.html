@@ -13,6 +13,8 @@
   <link href="https://fonts.googleapis.com/css?family=Niramit:400,700" rel="stylesheet"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap-social.css">
 
   <!-- latest compiled jquery for bootstrap -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -20,13 +22,36 @@
   <!-- Latest compiled JavaScript for bootstrap -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <script src="js/easing.js"></script>
   <script src="js/util.js"></script>
+  <script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 500, function(){
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
+</script>
 
 </head>
 <body class="home">
   <div class="title-header">
-    <h1>Greeks Gone Green</h1>
+  <div class="title-content">
+    <h1 style="border-bottom: solid 1px white; width: 50%; margin: auto auto;">Greeks Gone Green</h1>
+    <span>University of California, San Diego</span>
+  </div>
   </div>
 
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #619967;">
@@ -42,46 +67,139 @@
       <li class="nav-item">
         <a class="nav-link" href="#events">Events</a>
       </li>
-      <li class="nav-item">
+      <!-- Get rid of for now. ><li class="nav-item">
         <a class="nav-link" href="#awareness">Awareness</a>
-      </li>
+      </li> -->
       <li class="nav-item">
         <a class="nav-link" href="./pages/experiment.html">Ride or Die Mural</a>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
     <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fab fa-facebook-f"></i> Facebook
-          <span class="sr-only">(current)</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fab fa-instagram"></i> Instagram</a>
-      </li>
+      <a class="btn btn-block btn-social" href="https://www.facebook.com/GreeksGoneGreen/">
+          <span class="fa fa-facebook"></span> Facebook
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-block btn-social" href="https://www.instagram.com/ucsd_ggg/?utm_source=ig_profile_share&igshid=q8ur0j2ncebl">
+          <span class="fa fa-instagram"></span> Instagram
+      </a>
+    </li>
     </ul>
   </div>
   </nav>
 
 <div class="maincontent">
-  <div class ="container" id='about-us'>
-    <h2>Who are we?</h2>
-    <text>Greeks Gone Green is a nonprofit organization dedicated to the three G’s: Greek unity through community involvement;
-      Global, regional and local environmental awareness; and Gateways to sustainability within UCSD. Greeks Gone Green promotes
-      “green” thinking and solutions to not only Greek organizations but also to the greater UCSD community.
+  <img src="img/TeamPhoto.jpg" class="banner" style="width: 85%; height: 400px;
+      object-fit: cover; margin-top: 40px; border-radius: 8px;"/>
+    <div class ="container" id='about-us'>
+      <h2>Who are we? </h2>
+      <text><i>Greeks Gone Green is a student-run organization comprised of Greek affiliated
+        students dedicated to enhancing environmental awareness within the Greek community and helping this
+        community to operate in ways that are environmentally responsible.
+      </i></text>
+    </div>
+    <div class="container">
+      <h2>Our Purpose</h2>
+      <text>Greeks Gone Green is a nonprofit organization dedicated to the three G’s: Greek unity through community involvement;
+        Global, regional and local environmental awareness; and Gateways to sustainability within UCSD. Greeks Gone Green promotes
+        “green” thinking and solutions to not only Greek organizations but also to the greater UCSD community.
+      </text>
+    </div>
+
+  <div class="container" id="mission">
+    <h2>Our Mission</h2>
+    <text>
+      "To enhance environmental awareness and promote sustainable practices within the UCSD
+      community that individuals can incorporate into their own lives and extend beyond."
     </text>
   </div>
 
   <div class="container">
-    <h2>Mission Statement</h2>
-    <text>
-      To enhance environmental awareness and promote sustainable practices within the UCSD
-      community that individuals can incorporate into their own lives and extend beyond.
-    </text>
+    <h2>The Team</h2>
+    <div class="row teammember">
+        <div class="col-md-3">
+          <img src="./img/Mack.png" class="member-img"/>
+        </div>
+        <div class="col">
+          <h4>Mackenzie Saideman</h4>
+          Mackenzie is our president! She is in Chi Omega and is a senior studying marine biology. She joined ggg
+          to bring environmental awareness to the greek community. As president, she has had the
+          opportunity to lead like-minded individuals to do the same. Her favorite national park
+          is Yosemite and her favorite fish is a mola mola!
+        </div>
+    </div>
+    <div class="row teammember">
+        <div class="col-md-3">
+          <img src="./img/Amber.png" class="member-img"/>
+        </div>
+        <div class="col-md-9">
+          <h4>Amber Fossier</h4>
+          Amber is our VP of Campus Outreach. She is a 4th year human biology
+          major and computer science minor in Alpha Omicron Pi! Growing up in San Francisco, she has
+          always been very environmentally conscious and loves that she can continue that with her
+          friends in the Greek community! One of header favorite places is Tahoe, and loves orcas!
+        </div>
+    </div>
+    <div class="row teammember">
+        <div class="col-md-3">
+          <img src="./img/Uday.png" class="member-img"/>
+        </div>
+        <div class="col">
+          <h4>Uday Govindswamy</h4>
+          Uday is our Special Projects Director! He is a senior in Phi Gamma Delta (FIJI) majoring in
+          environmental engineering and minoring in earth sciences. He says “Climate change solutions
+          are in our technology. We need to find potential solutions to reduce the speed that climate
+          change hits us at. Through research, studies, and data analysis we can explore and inspire
+          others in one of the most socially active groups on campus” His favorite national park is
+          Piha in New Zealand and his favorite plant is the ginko biloba!
+        </div>
+    </div>
+    <div class="row teammember">
+        <div class="col-md-3">
+          <img src="./img/Dawn.png" class="member-img"/>
+        </div>
+        <div class="col">
+          <h4>Dawn</h4>
+          Dawn is our VP of finance and a senior in Kappa Kappa Gamma! She is majoring in Human Biology and
+          she says “Growing up on the island of Guam, I’ve always valued the environment and protecting
+          it. I joined GGG because I want to be able to bring this awareness to my peers.  I am literally
+          a koala."
+        </div>
+    </div>
+    <div class="row teammember">
+        <div class="col-md-3">
+          <img src="./img/Sam.png" class="member-img"/>
+        </div>
+        <div class="col">
+          <h4>Samantha Noël</h4>
+          Sam is our VP of research. She is a 3rd year in Chi Omega, majoring in environmental systems- ecology,
+          behavior, evolution with a minor in marine science. She joined GGG because she wanted to be a part
+          of the conservation impact on the environment. She thought it was important to bring awareness to
+          Greek life since it is such a large community on campus! Her favorite animal is the queen triggerfish
+          and favorite national park is Redwood National Park
+        </div>
+    </div>
+    <div class="row teammember">
+        <div class="col-md-3">
+          <img src="./img/defaultPerson.png" class="member-img"/>
+        </div>
+        <div class="col bio">
+          <h4>You! Join us!</h4>
+          Students from all backgrounds are welcome and we encourage members to have diverse interests.
+          To become a member of Greeks Gone Green, one must attend a regular weekly meeting and register
+          with the Co-Presidents and Vice President of Administration by providing contact information. Members
+          are identified by a Member Roster maintained by the Vice President of Administration and Co-Presidents.
+        </div>
+    </div>
   </div>
 
-  </div>
+    <div class="container" id="events">
+      <h2>Our Events</h2>
+        <span style="display: block;">Check out our events on Facebook!</span><br>
+        <a href="https://www.facebook.com/pg/GreeksGoneGreen/events/?ref=page_internal"
+          class="btn btn-primary" role="button">Events</a>
+    </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>

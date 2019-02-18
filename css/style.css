@@ -3,40 +3,97 @@ Primary Color: F48FB1
 Primary Variant: c2185b
 Secondary: f07a62
 */
+html {
+  scroll-behavior: smooth;
+}
 
 .home h1, .home h2, .home h3, .home h4 {
   font-family: 'Staatliches', 'cursive';
 }
 
+.home, span {
+  font-family: 'Open Sans', 'sans-serif';
+  line-height: 1.5em;
+}
+
+.container:last-of-type {
+  margin-bottom: 5%;
+}
+
+#mission {
+  background: rgba(185, 199, 176, 0.6);
+  width: 100vw;
+  padding: 50px 15%;
+  box-shadow: 2px 1px 14px rgba(10,10,10,0.5);
+}
+
+.maincontent {
+  text-align: center;
+}
+
+.title-content {
+  position: relative;
+  top: 40px;
+}
+
+.member-img {
+  border-radius: 50%;
+  width: 150px;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.6);
+}
+
+.teammember {
+  margin-top: 50px;
+  align-items: center;
+  width: 100%;
+}
+
+.bio {
+  text-align: left;
+}
+
 .container {
   width: 55%;
   margin-top: 50px;
+  text-align: left;
+}
+
+#events {
+  text-align: center;
+  width: 100vw;
+  background-color: #EEEEEE;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#events .btn {
+  background-color: #619967;
+  padding: 20px 100px;
+  border: none;
+  box-shadow: 1px 2px 13px rgba(20,20,20,0.6);
+}
+
+#events .btn:hover {
+  background-color: rgba(97,153,103,0.4);
 }
 
 .title-header {
-  background-image: url("../img/MainBackground.jpg");
+  background-image: url("../img/MainBackground.png");
   height: 30vh;
+  object-fit: cover;
   z-index: 100;
-  font-size: 2em;
+  font-size: 1.5em;
   color: white;
   text-align: center;
 }
 
 .navbar-nav .nav-item .nav-link {
   color: white;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 .title-header h1 {
   font-size: 3em;
-  position: relative;
-  top: 55px;
-}
-
-.home {
-  font-size: 1.2em;
-  font-family: 'Niramit', sans-serif;
-  line-height: 1.3em;
 }
 
 .navbar {
@@ -54,26 +111,53 @@ Secondary: f07a62
   border-radius: 8%;
 }
 
+.sidebar {
+  position: fixed;
+  height: 100%;
+  top: 40%;
+}
+
+.sidebar a {
+  color: rgba(10,10,10,0.8);
+  font-size: 1.1em;
+}
+
+.sidebar a:hover {
+  color: #619967;
+}
+
 @media only screen and (max-width: 500px) {
-  #Experience, #Projects {
-    width: 95%;
-    padding: 20px;
-    box-shadow: 1px,2px,16px, rgba(0,0,0,0.25);
-    border-radius: 1%;
-    margin-bottom: 70px;
-  }
-
-  .row {
-    flex-direction: column;
-  }
-
-  .card {
-    text-align: center;
+  .container {
+    margin: 20px 20px 20px 20px;
     width: 100%;
-    margin: 30px auto;
-    padding: 20px 20px;
-    box-shadow: 1px,2px,16px, rgba(0,0,0,0.25);
-    border-radius: 1%;
   }
 
+  .shaded {
+    background: rgba(185, 199, 176, 0.6);
+    width: 100%;
+    padding: 50px 10px;
+    box-shadow: 2px 1px 14px rgba(10,10,10,0.5);
+  }
+
+  .title-header {
+    font-size: 1.2em;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    color: white;
+    font-size: 1em;
+  }
+
+  .title-header h1 {
+    font-size: 2.3em;
+  }
+
+  .col-md-3 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .sidebar {
+    display: none;
+  }
 }
