@@ -34,6 +34,20 @@ html {
 .title-content {
   position: relative;
   top: 40px;
+  background-color: rgba(97,153,103,0.7);
+  width: 50%;
+  padding: 10px 10px;
+  margin: auto auto auto auto;
+}
+
+.title-header {
+  background-image: url("../img/MainBackground.png");
+  height: 30vh;
+  object-fit: cover;
+  z-index: 100;
+  font-size: 1.5em;
+  color: white;
+  text-align: center;
 }
 
 .member-img {
@@ -75,16 +89,6 @@ html {
 
 #events .btn:hover {
   background-color: rgba(97,153,103,0.4);
-}
-
-.title-header {
-  background-image: url("../img/MainBackground.png");
-  height: 30vh;
-  object-fit: cover;
-  z-index: 100;
-  font-size: 1.5em;
-  color: white;
-  text-align: center;
 }
 
 .navbar-nav .nav-item .nav-link {
