@@ -31,26 +31,27 @@ html {
   text-align: center;
 }
 
-.title-content {
-  position: relative;
-  top: 40px;
-  background-color: rgba(97,153,103,0.7);
-  width: 50%;
-  padding: 10px 10px;
-  margin: auto auto auto auto;
-}
-
 .title-header {
   background-image: url("../img/MainBackground.png");
-  height: 30vh;
-  object-fit: cover;
+  height: 250px;
+  object-fit: contain;
   z-index: 100;
   font-size: 1.5em;
   color: white;
   text-align: center;
 }
 
-.member-img {
+.title-content {
+  position: relative;
+  top: 40px;
+  background-color: rgba(97,153,103,0.7);
+  width: 50%;
+  max-height: 250px;
+  padding: 10px 10px;
+  margin: auto auto auto auto;
+}
+
+.col-img {
   border-radius: 50%;
   width: 150px;
   box-shadow: 1px 1px 10px rgba(0,0,0,0.6);
@@ -96,6 +97,10 @@ html {
   font-size: 1em;
 }
 
+.dropdown-menu .dropdown-item:active {
+  background-color: rgba(97,153,103,0.7);
+}
+
 .title-header h1 {
   font-size: 3em;
 }
@@ -118,7 +123,7 @@ html {
 .sidebar {
   position: fixed;
   height: 100%;
-  top: 40%;
+  top: 330px;
 }
 
 .sidebar a {
@@ -130,9 +135,19 @@ html {
   color: #619967;
 }
 
+@media only screen and (max-width: 1150px) {
+  .title-header {
+    font-size: 1.2em;
+  }
+
+  .container {
+    width: 70%;
+  }
+}
+
 @media only screen and (max-width: 500px) {
   .container {
-    margin: 20px 20px 20px 20px;
+    margin: 20px 0px 20px 0px;
     width: 100%;
   }
 
@@ -144,7 +159,7 @@ html {
   }
 
   .title-header {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 
   .navbar-nav .nav-item .nav-link {
@@ -154,6 +169,14 @@ html {
 
   .title-header h1 {
     font-size: 2.3em;
+  }
+
+  .banner {
+    display: none;
+  }
+
+  .title-content {
+    width: 90%;
   }
 
   .col-md-3 {
